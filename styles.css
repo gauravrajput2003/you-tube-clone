@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 6.25rem auto;
+    grid-template-columns: 13rem 1fr;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: white;
+    grid-column: 1 / 3;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 18px 14px 18px 16px;
+    min-width: 200px;
+    margin-right: 20px;  /* Added margin to move logo right slightly */
+}
+
+.logo-container img {
+    height: 50px;  /* Increased from 28px for bigger logo */
+    width: auto;
+    object-fit: contain;
+    margin-left: 10px;  /* Added margin to adjust logo position */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 0 1 732px;
+    margin: 0 auto; /* Centers the search container */
+    padding: 0 16px;
+}
+
+input[name="search-text"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+}
+
+/* Add styles for the search button */
+button {
+    height: 40px;
+    width: 64px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+button svg {
+    width: 20px;
+    height: 20px;
+    color: #606060;
+}
+
+aside {
+    background-color: b;
+}
+
+main {
+    background-color: whitesmoke;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-auto-rows: auto;
+    gap: 2rem;
+    padding: 3rem 2rem;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+main:hover{
+    cursor: pointer;
+}
+
+.card {
+    background-color: rgb(209, 42, 42);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* If you have images inside cards, add this to ensure they're rounded too */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+}
